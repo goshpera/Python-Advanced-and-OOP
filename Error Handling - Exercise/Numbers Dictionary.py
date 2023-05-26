@@ -6,8 +6,12 @@ while True:
         break
 
     num_as_str = line
-    num_as_int = int(input())
-    numbers_dict[num_as_str] = num_as_int
+    try:
+        num_as_int = int(input())
+        numbers_dict[num_as_str] = num_as_int
+    except ValueError:
+        print("The variable must be an integer")
+
 
 while True:
     line = input()
@@ -24,7 +28,10 @@ while True:
     if line == "End":
         break
 
-    if line in numbers_dict:
+    try:
         numbers_dict.pop(line)
+    except KeyError:
+        print("Number does not exist in dictionary")
+
 
 print(numbers_dict)
