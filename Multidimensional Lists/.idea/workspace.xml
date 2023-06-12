@@ -7,6 +7,7 @@
     <list default="true" id="949386ff-2bd0-44b4-9cf5-0ebfca01d4b2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/04. Sum Matrix Columns.py" beforeDir="false" afterPath="$PROJECT_DIR$/04. Sum Matrix Columns.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05. Primary Diagonal.py" beforeDir="false" afterPath="$PROJECT_DIR$/05. Primary Diagonal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

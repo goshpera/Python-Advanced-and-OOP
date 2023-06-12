@@ -1,1 +1,18 @@
-row, cols = [int(x) for x in input().split()]
+rows, cols = [int(x) for x in input().split()]
+
+matrix = []
+
+for _ in range(rows):
+    inner_list = [int(el) for el in input().split()]
+    matrix.append(inner_list)
+
+col_sums = []
+
+for col_idx in range(cols):
+    sum_col_elements = 0
+    for row_idx in range(rows):
+        sum_col_elements += matrix[row_idx][col_idx]
+    col_sums.append(sum_col_elements)
+
+for col_sum in col_sums:
+    print(col_sum)
