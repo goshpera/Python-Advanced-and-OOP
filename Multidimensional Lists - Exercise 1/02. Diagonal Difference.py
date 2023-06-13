@@ -10,3 +10,14 @@ for i in range(num):
     secondary_sum += matrix[i][num - i - 1]
 
 print(abs(primary_sum - secondary_sum))
+
+'''
+alternative way:
+
+for row in range(num):
+    line = [int(x) for x in input().split()]
+    
+    primary_sum += line[row]
+    secondary_sum += line[num - row - 1]
+print(abs(primary_sum - secondary_sum))
+'''
