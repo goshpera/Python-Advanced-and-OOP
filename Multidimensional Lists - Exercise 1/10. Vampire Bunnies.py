@@ -13,6 +13,38 @@ def check_valid_idx(row, col, player=False):
         wins = True
 
 
+def check_player_alive(row, col):
+    if matrix[row][col] == "B":
+        show_results("dead")
+
+
+def bunnies_position():
+    positions = []
+
+    for row in range(rows):
+        for col in range(cols):
+            if matrix[row][col] == "B":
+                positions.append([row, col])
+
+    return positions
+
+
+def bunnies_move(bunnies_pos):
+    for row, col in bunnies_pos:
+        for bunnie_move in directions.values():
+            new_row, new_col = row + bunnie_move[0], col + bunnie_move[1]
+
+            if check_valid_idx(new_row, new_col):
+                matrix[new_row][new_col] = "B"
+
+
+def show_results(status="won"):
+    [print(*row, sep="") for row in matrix]
+    print(f"{status}: {player_row} {player_col}")
+
+    raise SystemExit
+
+
 rows, cols = [int(x) for x in input().split()]
 matrix = [list(input()) for _ in range(rows)]
 
@@ -34,3 +66,10 @@ for command in commands:
 
     if check_valid_idx(player_movement_row, player_movement_col, True):
         player_row, player_col = player_movement_row, player_movement_col
+
+    bunnies_move(bunnies_position())
+
+    if wins:
+        show_results()
+
+    check_player_alive(player_row, player_col)
