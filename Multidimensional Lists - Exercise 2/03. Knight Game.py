@@ -6,14 +6,14 @@ matrix = [list(input()) for _ in range(size)]
 # positions = [(x, y) for x in a for y in a if abs(x) != abs(y)]
 
 positions = (
-    (-2, -1),  #up 2 left 1
-    (-2, 1),  #up 2 right 1
-    (-1, -2),  #up 1 left 2
-    (-1, 2),  #up 1 right 2
-    (2, 1),  #down 2 right 1
-    (2, -1),  #down 2 left 1
-    (1, 2),  #down 1 right 2
-    (1, -2),  #down 1 left 2
+    (-2, -1),  # up 2 left 1
+    (-2, 1),  # up 2 right 1
+    (-1, -2),  # up 1 left 2
+    (-1, 2),  # up 1 right 2
+    (2, 1),  # down 2 right 1
+    (2, -1),  # down 2 left 1
+    (1, 2),  # down 1 right 2
+    (1, -2),  # down 1 left 2
 )
 
 removed_knights = 0
