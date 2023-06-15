@@ -1,6 +1,10 @@
 size = int(input())
 matrix = [list(input()) for _ in range(size)]
 
+
+# a = [-2, -1, 1, 2]
+# positions = [(x, y) for x in a for y in a if abs(x) != abs(y)]
+
 positions = (
     (-2, -1),  #up 2 left 1
     (-2, 1),  #up 2 right 1
