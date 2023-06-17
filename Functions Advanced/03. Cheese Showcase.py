@@ -1,9 +1,9 @@
 def sorting_cheeses(**kwargs):
-    kwargs = sorted(kwargs.items(), key=lambda x: (len(x[1]), x[0]))
+    sorted_cheeses = sorted(kwargs.items(), key=lambda x: (-len(x[1]), x[0]))
 
     result = []
 
-    for (cheese_name, quantities) in kwargs:
+    for (cheese_name, quantities) in sorted_cheeses:
         result.append(cheese_name)
         quantity_list = sorted(quantities, reverse=True)
         result += quantity_list
